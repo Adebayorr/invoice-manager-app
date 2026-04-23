@@ -1,6 +1,6 @@
 import { useReducer, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useInvoices } from '../hooks/useInvoice'
+import { useInvoices } from '../hooks/UseInvoices'
 import { generateId, calcPaymentDue, calcTotal } from '../utils/helpers'
 
 // ─── Field component OUTSIDE InvoiceForm ────────────────
