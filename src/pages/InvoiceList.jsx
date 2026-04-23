@@ -56,7 +56,7 @@ function InvoiceList() {
             aria-expanded={dropdownOpen}
           >
             <span>
-              Filter by status
+              Filter
               {activeFilters.length > 0 && ` (${activeFilters.length})`}
             </span>
             <svg
@@ -96,7 +96,7 @@ function InvoiceList() {
         </div>
 
         <button className="btn btn--primary add--new" onClick={() => setShowForm(true)}>
-          <span className='btn--primary__plus' aria-hidden="true">+</span> New Invoice
+          <span className='btn--primary__plus' aria-hidden="true">+</span> New
         </button>
       </div>
 

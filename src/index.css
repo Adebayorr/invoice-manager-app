@@ -233,7 +233,7 @@ h2 {
 } */
 
 /* Desktop nav — vertical */
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
   .nav {
     flex-direction: column;
     width: 103px;
@@ -767,6 +767,7 @@ h2 {
 .invoice-detail__value {
   font-size: 0.9375rem;
   font-weight: 700;
+  text-wrap-mode: wrap;
 }
 
 .invoice-detail__client-address {
@@ -909,6 +910,24 @@ h2 {
 
 .invoice-form {
   position: absolute;
+  top: 72px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 720px;
+  min-height: 0;
+  /* height: 100dvh; */
+  background-color: var(--color-bg);
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 1.5rem 1.5rem 0;
+}
+
+@media (min-width: 800px) {
+
+.invoice-form {
+  position: absolute;
   top: 0;
   left: 80px;
   bottom: 0;
@@ -924,6 +943,8 @@ h2 {
   
 }
 
+} 
+
 .invoice-form__title {
   padding: 3rem 4rem 0;
   font-size: 1.5rem;
@@ -936,8 +957,7 @@ h2 {
 
 .invoice-form__body {
   flex: 1;               
-  min-height: 0;          
-  overflow-y: auto;    
+  min-height: 0;  
   padding: 2rem 4rem;
   display: flex;
   flex-direction: column;
@@ -1014,7 +1034,7 @@ fieldset legend {
 }
 
 
-.form-row {
+/* .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -1070,6 +1090,92 @@ fieldset legend {
   color: var(--color-text-secondary);
   transition: color var(--transition);
   font-size: 1rem;
+} */
+
+/* ── 2-column row (default mobile) ── */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* City + PostCode + Country → 2 cols on mobile, 3 on tablet */
+.form-row--3 {
+  grid-template-columns: 1fr 1fr;  /* City + PostCode side by side */
+}
+
+/* Country goes full width on its own row on mobile */
+.form-row--3 .form-field:last-child {
+  grid-column: 1 / -1;
+}
+
+/* On tablet → all 3 in one row */
+@media (min-width: 600px) {
+  .form-row--3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .form-row--3 .form-field:last-child {
+    grid-column: auto;  /* reset — no longer full width */
+  }
+}
+
+/* ── Item row ── */
+.form-item {
+  display: grid;
+  grid-template-columns: 1fr 60px 100px 80px 20px;
+  gap: 1rem;
+  align-items: end;
+}
+
+/* On mobile stack name full width, rest in a row */
+@media (max-width: 599px) {
+  .form-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Qty + Price + Total + Delete in one row */
+  .form-item .form-field:nth-child(2),
+  .form-item .form-field:nth-child(3),
+  .form-item__total,
+  .form-item__delete {
+    display: inline-flex;
+  }
+
+  /* Make Qty, Price, Total, Delete sit on one row */
+  .form-item__bottom-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 80px 20px;
+    gap: 0.75rem;
+    align-items: end;
+  }
+}
+
+/* ── Item total value ── */
+.form-item__total {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.form-item__total-value {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #888eb0;
+  padding: 1rem 0;
+}
+
+/* ── Delete button ── */
+.form-item__delete {
+  padding-bottom: 1rem;
+  color: #888eb0;
+  transition: color var(--transition);
+  font-size: 1rem;
+}
+
+.form-item__delete:hover {
+  color: var(--color-danger);
 }
 
 .form-item__delete:hover {
@@ -1082,10 +1188,12 @@ fieldset legend {
 }
 
 .invoice-form__footer {
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 0.2rem;
   display: flex;
+  flex-wrap: wrap;
+  gap:12px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--color-bg);
   flex-shrink: 0;
 }
@@ -1106,8 +1214,13 @@ fieldset legend {
 
 
 
-
-
+@media (max-width: 600px) {
+  .invoice-list__header,
+  .invoice-form__body,
+  .invoice-form__footer {
+    padding: 2rem 1.2rem;
+  }
+}
 
 
 /* :root {
