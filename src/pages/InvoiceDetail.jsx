@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useInvoices } from '../hooks/UseInvoices'
+import { useInvoices } from '../hooks/useInvoices'
 import StatusBadge from '../components/StatusBadge'
 import InvoiceForm from '../components/InvoiceForm'
 import DeleteModal from '../components/DeleteModal'
