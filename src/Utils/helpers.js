@@ -1,4 +1,4 @@
-// Generates a random invoice ID like "RT3080"
+
 export function generateId() {
   const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   const nums = Math.floor(1000 + Math.random() * 9000)
