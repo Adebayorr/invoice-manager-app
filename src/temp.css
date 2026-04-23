@@ -1,0 +1,221 @@
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+
+
+/* ============================================
+   LAYOUT — App Shell
+   ============================================ */
+
+
+
+
+
+/* Desktop — nav moves to left side */
+
+
+/* ============================================
+   NAV
+   ============================================ */
+
+/* .nav {
+  background-color: var(--color-nav);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 72px;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+} */
+
+
+
+/* .nav__logo-img {
+  width: 100%;
+  height: 100%;
+} */
+/* 
+.nav__logo::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: var(--color-purple-light);
+  border-radius: 1.25rem 0 0 0;
+} */
+
+
+
+
+
+
+
+
+
+/* .nav__logo > image {
+  width: 100%;
+} */
+
+  
+
+  
+
+/* ============================================
+   INVOICE LIST PAGE
+   ============================================ */
+
+
+
+
+
+/* ============================================
+   FILTER BUTTONS
+   ============================================ */
+
+
+
+.filter-btn:hover {
+  border-color: var(--color-purple);
+  color: var(--color-purple);
+}
+
+.filter-btn--active {
+  background-color: var(--color-purple);
+  color: #ffffff;
+}
+
+/* ============================================
+   INVOICE CARD
+   ============================================ */
+
+
+
+
+
+
+/* ============================================
+   STATUS BADGE
+   ============================================ */
+
+
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+
+
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+
+/* ============================================
+   FOCUS & ACCESSIBILITY
+   ============================================ */
+
+
+
+/* ============================================
+   SKIP LINK (Accessibility)
+   ============================================ */
+
+
+/* ============================================
+   SCROLLBAR (cosmetic)
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+
+
+/* ============================================
+   BACK BUTTON
+   ============================================ */
+
+
+/* ============================================
+   INVOICE DETAIL
+   ============================================ */
+
+
+
+
+
+
+/* Grand total */
+
+
+
+/* ============================================
+   FORM OVERLAY & DRAWER
+   ============================================ */
+
+  
+.invoice-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 720px;
+   height: 100vh;         
+  height: 100dvh;  
+  background-color: var(--color-bg);
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-direction: column; 
+  border-radius: 0 1.5rem 1.5rem 0;
+  overflow: hidden;     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .invoice-form__body {
+  overflow-y: scroll !important;
+} */
