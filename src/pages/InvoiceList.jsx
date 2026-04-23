@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'  // 👈 add useRef, useEffect
-import { useInvoices } from '../hooks/useInvoices'
+import { useInvoices } from '../hooks/UseInvoices'
 import InvoiceCard from '../components/InvoiceCard'
 import emailCampaign from '../images/emailCampaign.png'
 import InvoiceForm from '../components/InvoiceForm'
